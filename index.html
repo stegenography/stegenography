@@ -1,0 +1,1971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StegoArt | The Art of Hiding Data</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ========================================================
+     STEGOART SECURE LOGIN
+     ======================================================== -->
+
+<div id="loginScreen" class="login-screen">
+
+    <div class="login-container">
+
+        <!-- Logo / Title -->
+        <div class="login-header">
+
+            <div class="login-logo">
+                S
+            </div>
+
+            <h1>STEGO<span>ART</span></h1>
+
+            <p>SECURE ACCESS SYSTEM</p>
+
+        </div>
+
+
+        <!-- Login Box -->
+        <div class="login-box">
+
+            <div class="security-status">
+                <span class="status-dot"></span>
+                SECURE CONNECTION
+            </div>
+
+
+            <!-- USER ID -->
+            <div class="login-field">
+
+                <label for="loginUserId">
+                    USER ID
+                </label>
+
+                <div class="login-input-wrapper">
+
+                    <span class="input-icon">👤</span>
+
+                    <input
+                        type="text"
+                        id="loginUserId"
+                        placeholder="Enter User ID"
+                        autocomplete="username"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- PASSWORD -->
+            <div class="login-field">
+
+                <label for="loginPassword">
+                    PASSWORD
+                </label>
+
+                <div class="login-input-wrapper">
+
+                    <span class="input-icon">🔒</span>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter Password"
+                        autocomplete="current-password"
+                    >
+
+                    <button
+                        type="button"
+                        id="loginPasswordToggle"
+                        class="password-toggle"
+                    >
+                        SHOW
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- DIGITAL SIGNATURE -->
+            <div class="login-field">
+
+                <label for="digitalSignature">
+                    DIGITAL SIGNATURE
+                </label>
+
+                <div class="signature-wrapper">
+
+                    <canvas
+                        id="digitalSignature"
+                        width="420"
+                        height="140"
+                    ></canvas>
+
+                    <div class="signature-placeholder">
+                        ✍ SIGN HERE
+                    </div>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="clearSignatureBtn"
+                    class="clear-signature"
+                >
+                    CLEAR SIGNATURE
+                </button>
+
+            </div>
+
+
+            <!-- LOGIN MESSAGE -->
+            <div
+                id="loginMessage"
+                class="login-message"
+            ></div>
+
+
+            <!-- LOGIN BUTTON -->
+            <button
+                type="button"
+                id="loginBtn"
+                class="login-btn"
+            >
+                🔐 AUTHENTICATE
+            </button>
+
+
+            <div class="login-footer">
+
+                <span>STEGOART SECURITY</span>
+
+                <span>•</span>
+
+                <span>DIGITAL VERIFICATION ENABLED</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- ========================================================
+     ACCESS GRANTED ANIMATION
+     ======================================================== -->
+
+<div id="accessGrantedScreen" class="access-granted-screen">
+
+    <div class="access-content">
+
+        <div class="access-icon">
+            ✓
+        </div>
+
+        <div class="access-line"></div>
+
+        <h2>ACCESS GRANTED</h2>
+
+        <p>IDENTITY VERIFIED</p>
+
+        <div class="access-user">
+            USER: <span id="accessUserName">SHOAIB</span>
+        </div>
+
+        <div class="access-status">
+            <span class="status-dot"></span>
+            SECURE SESSION ESTABLISHED
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>&lt;/&gt;</span> STEGOART
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#encode">Encode</a>
+            <a href="#decode">Decode</a>
+            <a href="#smart-lab">Smart Lab</a>
+            <a href="#detector">AI Detector</a>
+            <button
+    id="logoutBtn"
+    class="logout-btn"
+    type="button"
+>
+    🚪 LOGOUT
+</button>
+        </nav>
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="status">
+                <span></span>
+                SECURE • PRIVATE • LOCAL
+            </div>
+
+            <h1>
+                THE ART OF
+                <strong>HIDING DATA</strong>
+            </h1>
+
+            <p>
+                Hide secret messages inside ordinary images
+                using image steganography.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#encode"
+                    class="btn primary-btn"
+                >
+                    START HIDING →
+                </a>
+
+                <a
+                    href="#how-it-works"
+                    class="btn secondary-btn"
+                >
+                    HOW IT WORKS
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-graphic">
+
+            <div class="cyber-circle">
+                🔐
+            </div>
+
+            <p>
+                01001000 01001001
+            </p>
+
+            <p>
+                HIDE • PROTECT • REVEAL
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section
+        class="section"
+        id="about"
+    >
+
+        <div class="section-heading">
+
+            <span>01 / ABOUT</span>
+
+            <h2>
+                What is
+                <strong>Steganography?</strong>
+            </h2>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div>
+
+                <p>
+                    Steganography is the practice of hiding
+                    information inside another file, such as
+                    an image.
+                </p>
+
+                <p>
+                    Instead of making the encrypted message
+                    obvious, steganography attempts to hide
+                    the existence of the message itself.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="card-icon">
+                    ◈
+                </div>
+
+                <h3>
+                    HIDDEN DATA
+                </h3>
+
+                <p>
+                    A secret message can be embedded into
+                    image data while keeping the image
+                    visually similar.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HOW IT WORKS ================= -->
+
+    <section
+        class="section"
+        id="how-it-works"
+    >
+
+        <div class="section-heading">
+
+            <span>02 / PROCESS</span>
+
+            <h2>
+                How It
+                <strong>Works</strong>
+            </h2>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <div class="step-icon">
+                    🖼️
+                </div>
+
+                <h3>
+                    SELECT IMAGE
+                </h3>
+
+                <p>
+                    Choose an image to use as the carrier.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <div class="step-icon">
+                    ⌨️
+                </div>
+
+                <h3>
+                    ENTER MESSAGE
+                </h3>
+
+                <p>
+                    Type the secret message you want to hide.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <div class="step-icon">
+                    🔐
+                </div>
+
+                <h3>
+                    ENCODE
+                </h3>
+
+                <p>
+                    Hide the message inside the image.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    04
+                </div>
+
+                <div class="step-icon">
+                    📥
+                </div>
+
+                <h3>
+                    DOWNLOAD
+                </h3>
+
+                <p>
+                    Save your encoded image.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ENCODE ================= -->
+
+    <section
+        class="section tool-section"
+        id="encode"
+    >
+
+        <!-- SYSTEM STATUS -->
+
+        <div class="system-status">
+
+            <div class="status-item">
+
+                <span
+                    class="status-dot"
+                    id="systemDot"
+                ></span>
+
+                <span id="systemStatus">
+                    SYSTEM READY
+                </span>
+
+            </div>
+
+
+            <div class="status-item">
+
+                <span
+                    class="status-dot"
+                    id="imageDot"
+                ></span>
+
+                <span id="imageStatus">
+                    NO IMAGE
+                </span>
+
+            </div>
+
+
+            <div class="status-item">
+
+                <span
+                    class="status-dot"
+                    id="messageDot"
+                ></span>
+
+                <span id="messageStatus">
+                    NO MESSAGE
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="section-heading">
+
+            <span>
+                03 / ENCODE
+            </span>
+
+            <h2>
+                Hide Your
+                <strong>Message</strong>
+            </h2>
+
+        </div>
+
+
+        <div class="tool-grid">
+
+
+            <!-- ================= IMAGE CARD ================= -->
+
+            <div class="tool-card">
+
+                <div class="tool-header">
+
+                    <h3>
+                        01. SELECT IMAGE
+                    </h3>
+
+                    <span>
+                        INPUT
+                    </span>
+
+                </div>
+
+
+                <label
+                    for="encodeImage"
+                    class="upload-area"
+                >
+
+                    <div class="upload-icon">
+                        ⬆
+                    </div>
+
+                    <h4>
+                        UPLOAD IMAGE
+                    </h4>
+
+                    <p>
+                        Click to browse your image
+                    </p>
+
+                    <small>
+                        PNG / JPG / JPEG
+                    </small>
+
+                    <input
+                        type="file"
+                        id="encodeImage"
+                        accept="image/png,image/jpeg"
+                    >
+
+                </label>
+
+
+                <div id="encodePreview"></div>
+
+
+                <!-- IMAGE INFORMATION -->
+
+                <div
+                    class="image-info-panel"
+                    id="imageInfo"
+                >
+
+                    <div>
+
+                        <span>
+                            FILE
+                        </span>
+
+                        <strong id="fileName">
+                            No image selected
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            DIMENSIONS
+                        </span>
+
+                        <strong id="imageDimensions">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            CAPACITY
+                        </span>
+
+                        <strong id="imageCapacity">
+                            --
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= MESSAGE CARD ================= -->
+
+            <div class="tool-card">
+
+                <div class="tool-header">
+
+                    <h3>
+                        02. SECRET MESSAGE
+                    </h3>
+
+                    <span>
+                        DATA
+                    </span>
+
+                </div>
+
+
+                <textarea
+                    id="secretMessage"
+                    placeholder="Enter the message you want to hide..."
+                ></textarea>
+
+
+                <!-- PASSWORD -->
+
+                <div class="password-box">
+
+                    <div class="password-label">
+
+                        <span>
+                            ENCRYPTION PASSWORD
+                        </span>
+
+                        <span>
+                            OPTIONAL
+                        </span>
+
+                    </div>
+
+
+                    <div class="password-input">
+
+                        <input
+                            type="password"
+                            id="encryptionPassword"
+                            placeholder="Enter a password..."
+                        >
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                        >
+                            SHOW
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="message-info">
+
+                    <span>
+                        SECRET DATA
+                    </span>
+
+                    <span id="characterCount">
+                        0 characters
+                    </span>
+
+                </div>
+
+
+                <!-- CAPACITY -->
+
+                <div class="capacity-bar">
+
+                    <div id="capacityFill"></div>
+
+                </div>
+
+
+                <div class="capacity-text">
+
+                    <span>
+                        MESSAGE CAPACITY
+                    </span>
+
+                    <span id="capacityText">
+                        Select an image first
+                    </span>
+
+                </div>
+
+                <!-- ================= SMART HIDING MODE ================= -->
+
+                <div class="smart-mode-panel" id="smartModePanel">
+
+                    <div class="smart-mode-header">
+                        <div>
+                            <span class="smart-badge">AI</span>
+                            <strong>SMART HIDING MODE</strong>
+                        </div>
+                        <span class="smart-mode-status" id="smartModeStatus">STANDARD</span>
+                    </div>
+
+                    <p>
+                        Let StegoArt analyze image detail and select suitable hiding regions automatically.
+                    </p>
+
+                    <label class="smart-toggle">
+                        <input type="checkbox" id="smartHidingToggle">
+                        <span class="smart-slider"></span>
+                        <span class="smart-toggle-text">Enable AI Smart Hiding</span>
+                    </label>
+
+                    <div class="smart-analysis" id="smartAnalysis" hidden>
+                        <div><span>IMAGE ANALYSIS</span><strong id="smartAnalysisStatus">Waiting...</strong></div>
+                        <div><span>SELECTED REGIONS</span><strong id="smartRegionCount">--</strong></div>
+                        <div><span>HIDING STRATEGY</span><strong id="smartStrategy">Adaptive texture</strong></div>
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="encodeBtn"
+                    class="action-btn"
+                >
+                    🔐 ENCODE MESSAGE
+                </button>
+
+
+                <button
+                    type="button"
+                    id="clearEncodeBtn"
+                    class="clear-btn"
+                >
+                    ↻ CLEAR
+                </button>
+
+            </div>
+
+        </div>
+                <!-- ================= ENCODE PROCESS ================= -->
+
+        <div
+            class="process-panel"
+            id="encodeProcess"
+        >
+
+            <div class="process-title">
+
+                <span>
+                    ENCODING PROCESS
+                </span>
+
+                <span id="processStatus">
+                    READY
+                </span>
+
+            </div>
+
+
+            <div class="process-track">
+
+                <div
+                    class="process-step"
+                    id="encodeStep1"
+                >
+
+                    <div class="process-icon">
+                        🖼️
+                    </div>
+
+                    <span>
+                        IMAGE
+                    </span>
+
+                </div>
+
+
+                <div class="process-connector"></div>
+
+
+                <div
+                    class="process-step"
+                    id="encodeStep2"
+                >
+
+                    <div class="process-icon">
+                        ⌨️
+                    </div>
+
+                    <span>
+                        MESSAGE
+                    </span>
+
+                </div>
+
+
+                <div class="process-connector"></div>
+
+
+                <div
+                    class="process-step"
+                    id="encodeStep3"
+                >
+
+                    <div class="process-icon">
+                        🔐
+                    </div>
+
+                    <span>
+                        HIDE DATA
+                    </span>
+
+                </div>
+
+
+                <div class="process-connector"></div>
+
+
+                <div
+                    class="process-step"
+                    id="encodeStep4"
+                >
+
+                    <div class="process-icon">
+                        ✓
+                    </div>
+
+                    <span>
+                        COMPLETE
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="scan-line"></div>
+
+        </div>
+
+
+        <!-- ================= ENCODE RESULT ================= -->
+
+        <div class="result-card">
+
+            <div class="tool-header">
+
+                <h3>
+                    ENCODED IMAGE
+                </h3>
+
+                <span>
+                    OUTPUT
+                </span>
+
+            </div>
+
+
+            <div id="encodedPreview">
+
+                <p>
+                    Your encoded image will appear here.
+                </p>
+
+            </div>
+
+
+            <a
+                id="downloadBtn"
+                class="download-btn"
+                download="stegoart-encoded.png"
+            >
+                ↓ DOWNLOAD ENCODED IMAGE
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= AI SMART LAB ================= -->
+
+    <section class="section smart-lab-section" id="smart-lab">
+        <div class="section-heading">
+            <span>05 / SMART LAB</span>
+            <h2>AI <strong>Smart Hiding Lab</strong></h2>
+        </div>
+
+        <div class="smart-lab-intro">
+            <div class="smart-lab-icon">◉</div>
+            <div>
+                <h3>ADAPTIVE IMAGE ANALYSIS</h3>
+                <p>
+                    Upload a cover image and test how StegoArt selects high-detail regions for adaptive hiding.
+                    The Lab compares a standard sequential embedding candidate with an adaptive candidate and reports the measured detector result.
+                </p>
+                <div class="smart-flow">
+                    <span class="flow-step">IMAGE ANALYSIS</span><span>→</span>
+                    <span class="flow-step">REGION SELECTION</span><span>→</span>
+                    <span class="flow-step">ADAPTIVE HIDING</span><span>→</span>
+                    <span class="flow-step">DETECTOR FEEDBACK</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="smart-lab-workspace">
+            <div class="tool-card">
+                <div class="tool-header"><h3>01. LAB INPUT</h3><span>RESEARCH MODE</span></div>
+                <label for="smartLabImage" class="upload-area smart-lab-upload">
+                    <div class="upload-icon">◉</div>
+                    <h4>UPLOAD COVER IMAGE</h4>
+                    <p>Use a PNG or JPG image for the experiment</p>
+                    <small>PNG / JPG / JPEG</small>
+                    <input type="file" id="smartLabImage" accept="image/png,image/jpeg">
+                </label>
+                <div class="smart-lab-message">
+                    <label for="smartLabMessage">TEST SECRET MESSAGE</label>
+                    <textarea id="smartLabMessage" rows="4" placeholder="Enter a short test message..."></textarea>
+                </div>
+                <button type="button" id="runSmartLabBtn" class="action-btn">🤖 RUN SMART ANALYSIS</button>
+                <button type="button" id="clearSmartLabBtn" class="clear-btn">↻ CLEAR LAB</button>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-header"><h3>02. IMAGE ANALYSIS MAP</h3><span id="smartLabStatus">WAITING</span></div>
+                <div class="smart-lab-canvas-wrap">
+                    <canvas id="smartLabCanvas" width="640" height="420"></canvas>
+                    <div id="smartLabCanvasEmpty">Upload an image to generate the adaptive detail map.</div>
+                </div>
+                <div class="smart-lab-stats">
+                    <div><span>PIXELS</span><strong id="smartLabPixels">--</strong></div>
+                    <div><span>SELECTED REGIONS</span><strong id="smartLabRegions">--</strong></div>
+                    <div><span>PAYLOAD CAPACITY</span><strong id="smartLabCapacity">--</strong></div>
+                    <div><span>TEXTURE SCORE</span><strong id="smartLabTexture">--</strong></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="smart-lab-results" id="smartLabResults" hidden>
+            <div class="tool-card">
+                <div class="tool-header"><h3>03. STANDARD vs SMART</h3><span>MEASURED RESULT</span></div>
+                <div class="smart-comparison-grid">
+                    <div class="comparison-card">
+                        <h4>STANDARD HIDING</h4>
+                        <div class="comparison-score"><span id="smartLabStandardProb">--</span>%</div>
+                        <p>Sequential RGB LSB embedding</p>
+                        <small>PSNR: <strong id="smartLabStandardPsnr">--</strong> dB</small>
+                    </div>
+                    <div class="comparison-card smart-comparison">
+                        <h4>AI SMART HIDING</h4>
+                        <div class="comparison-score"><span id="smartLabSmartProb">--</span>%</div>
+                        <p>High-detail adaptive embedding</p>
+                        <small>PSNR: <strong id="smartLabSmartPsnr">--</strong> dB</small>
+                    </div>
+                </div>
+                <div class="smart-feedback-line" id="smartLabFeedback">Detector feedback will appear here after analysis.</div>
+                <div class="smart-lab-detail-grid">
+                    <div><span>SELECTED PIXELS</span><strong id="smartLabSelectedPixels">--</strong></div>
+                    <div><span>MESSAGE BITS</span><strong id="smartLabMessageBits">--</strong></div>
+                    <div><span>DETECTOR DELTA</span><strong id="smartLabDelta">--</strong></div>
+                    <div><span>STRATEGY</span><strong id="smartLabStrategy">--</strong></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= AI STEGANOGRAPHY DETECTOR ================= -->
+    <section class="section tool-section detector-section" id="detector">
+        <div class="section-heading">
+            <span>06 / AI ANALYSIS</span>
+            <h2>AI Steganography <strong>Detector</strong></h2>
+        </div>
+        <div class="detector-grid">
+            <div class="tool-card">
+                <div class="tool-header"><h3>01. SELECT IMAGE</h3><span>ANALYSIS INPUT</span></div>
+                <label for="detectorImage" class="upload-area detector-upload">
+                    <div class="upload-icon">⌁</div>
+                    <h4>UPLOAD IMAGE FOR DETECTION</h4>
+                    <p>Choose a PNG or JPG image to analyze</p>
+                    <small>PNG / JPG / JPEG</small>
+                    <input type="file" id="detectorImage" accept="image/png,image/jpeg">
+                </label>
+                <div id="detectorPreview"></div>
+                <button type="button" id="analyzeStegoBtn" class="action-btn detector-btn">🤖 ANALYZE IMAGE</button>
+                <button type="button" id="clearDetectorBtn" class="clear-btn">↻ CLEAR</button>
+            </div>
+            <div class="tool-card detector-result-card">
+                <div class="tool-header"><h3>02. DETECTION RESULT</h3><span>LIVE ANALYSIS</span></div>
+                <div id="detectorIdle" class="detector-idle">
+                    <div class="detector-orb">AI</div><h3>READY TO ANALYZE</h3><p>Upload an image and start the analysis.</p>
+                </div>
+                <div id="detectorResults" class="detector-results" style="display:none;">
+                    <div class="detector-score"><div class="score-label">STEGANOGRAPHY PROBABILITY</div><div class="score-value"><span id="detectorProbability">0</span><small>%</small></div><div class="score-bar"><div id="detectorScoreFill"></div></div></div>
+                    <div class="detector-scan-panel" id="detectorScanPanel">
+                        <div class="detector-scan-title">ANOMALY TRACE / PROBABILITY SCAN</div>
+                        <div class="detector-error-lines" id="detectorErrorLines">
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <div class="detector-scan-status" id="detectorScanStatus">SCANNING PIXEL DISTRIBUTION...</div>
+                    </div>
+                    <div class="detector-verdict" id="detectorVerdict">Analysis pending</div>
+                    <div class="detector-meta"><div><span>IMAGE</span><strong id="detectorFileName">--</strong></div><div><span>DIMENSIONS</span><strong id="detectorDimensions">--</strong></div><div><span>LSB SAMPLE</span><strong id="detectorLsbScore">--</strong></div></div>
+                    <div class="detector-checks"><div><span>✓</span> Pixel distribution analyzed</div><div><span>✓</span> RGB channel variation analyzed</div><div><span>✓</span> LSB patterns analyzed</div><div><span>✓</span> StegoArt signature checked</div></div>
+                    <p class="detector-note">This browser-based detector provides an estimated probability. It is not a laboratory-grade trained ML model.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= DECODE ================= -->
+
+    <section
+        class="section tool-section"
+        id="decode"
+    >
+
+        <div class="section-heading">
+
+            <span>
+                04 / DECODE
+            </span>
+
+            <h2>
+                Reveal Hidden
+                <strong>Data</strong>
+            </h2>
+
+        </div>
+
+
+        <div class="tool-card decode-card">
+
+            <div class="tool-header">
+
+                <h3>
+                    SELECT ENCODED IMAGE
+                </h3>
+
+                <span>
+                    INPUT
+                </span>
+
+            </div>
+
+
+            <label
+                for="decodeImage"
+                class="upload-area"
+            >
+
+                <div class="upload-icon">
+                    ⬆
+                </div>
+
+                <h4>
+                    UPLOAD ENCODED IMAGE
+                </h4>
+
+                <p>
+                    Select an image containing hidden data
+                </p>
+
+                <input
+                    type="file"
+                    id="decodeImage"
+                    accept="image/png,image/jpeg"
+                >
+
+            </label>
+
+
+            <div id="decodePreview"></div>
+
+
+            <!-- DECRYPTION PASSWORD -->
+
+            <div class="password-box">
+
+                <div class="password-label">
+
+                    <span>
+                        DECRYPTION PASSWORD
+                    </span>
+
+                    <span>
+                        REQUIRED
+                    </span>
+
+                </div>
+
+
+                <div class="password-input">
+
+                    <input
+                        type="password"
+                        id="decodePassword"
+                        placeholder="Enter the password..."
+                    >
+
+                    <button
+                        type="button"
+                        id="toggleDecodePassword"
+                    >
+                        SHOW
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- DECODE PROCESS -->
+
+            <div
+                class="process-panel"
+                id="decodeProcess"
+            >
+
+                <div class="process-title">
+
+                    <span>
+                        DECODING PROCESS
+                    </span>
+
+                    <span id="decodeStatus">
+                        READY
+                    </span>
+
+                </div>
+
+
+                <div class="process-track">
+
+                    <div
+                        class="process-step"
+                        id="decodeStep1"
+                    >
+
+                        <div class="process-icon">
+                            🖼️
+                        </div>
+
+                        <span>
+                            IMAGE
+                        </span>
+
+                    </div>
+
+
+                    <div class="process-connector"></div>
+
+
+                    <div
+                        class="process-step"
+                        id="decodeStep2"
+                    >
+
+                        <div class="process-icon">
+                            🔍
+                        </div>
+
+                        <span>
+                            SCAN DATA
+                        </span>
+
+                    </div>
+
+
+                    <div class="process-connector"></div>
+
+
+                    <div
+                        class="process-step"
+                        id="decodeStep3"
+                    >
+
+                        <div class="process-icon">
+                            🔓
+                        </div>
+
+                        <span>
+                            EXTRACT
+                        </span>
+
+                    </div>
+
+
+                    <div class="process-connector"></div>
+
+
+                    <div
+                        class="process-step"
+                        id="decodeStep4"
+                    >
+
+                        <div class="process-icon">
+                            ✓
+                        </div>
+
+                        <span>
+                            COMPLETE
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="scan-line"></div>
+
+            </div>
+
+
+            <!-- DECODE BUTTON -->
+
+            <button
+                type="button"
+                id="decodeBtn"
+                class="action-btn"
+            >
+                🔓 DECODE MESSAGE
+            </button>
+
+
+            <button
+                type="button"
+                id="clearDecodeBtn"
+                class="clear-btn"
+            >
+                ↻ CLEAR
+            </button>
+
+
+            <!-- DECODED MESSAGE -->
+
+            <div class="decoded-message">
+
+                <div class="message-title">
+                    EXTRACTED MESSAGE
+                </div>
+
+
+                <div id="decodedText">
+                    No hidden message detected yet.
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRIVACY ================= -->
+
+    <section class="security-section">
+
+        <div class="security-content">
+
+            <div class="security-icon">
+                🛡️
+            </div>
+
+            <div>
+
+                <span>
+                    PRIVACY FIRST
+                </span>
+
+                <h2>
+                    Your data stays in your browser.
+                </h2>
+
+                <p>
+                    StegoArt processes images locally,
+                    so your secret message does not need
+                    to be uploaded to a server.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TEXT STEGANOGRAPHY ================= -->
+
+    <section
+        id="text-steganography"
+        class="section text-stego"
+    >
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                TEXT STEGANOGRAPHY
+            </span>
+
+            <h2>
+                Hide Data Inside
+                <span>Text</span>
+            </h2>
+
+            <p>
+                Conceal a secret message inside an
+                ordinary-looking piece of text.
+            </p>
+
+        </div>
+
+
+        <div class="text-stego-grid">
+
+
+            <!-- TEXT ENCODE -->
+
+            <div class="stego-panel">
+
+                <div class="panel-title">
+
+                    <span>📝</span>
+
+                    <div>
+
+                        <h3>
+                            Encode Text
+                        </h3>
+
+                        <p>
+                            Hide your secret message
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <label for="coverText">
+                    COVER TEXT
+                </label>
+
+
+                <textarea
+                    id="coverText"
+                    placeholder="Enter normal-looking text here..."
+                ></textarea>
+
+
+                <label for="hiddenText">
+                    SECRET MESSAGE
+                </label>
+
+
+                <textarea
+                    id="hiddenText"
+                    placeholder="Enter the message you want to hide..."
+                ></textarea>
+
+
+                <button
+                    type="button"
+                    id="encodeTextBtn"
+                    class="cyber-btn"
+                >
+                    🔐 ENCODE TEXT
+                </button>
+
+
+                <div class="text-result">
+
+                    <span>
+                        ENCODED TEXT
+                    </span>
+
+                    <textarea
+                        id="encodedTextResult"
+                        readonly
+                        placeholder="Your encoded text will appear here..."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <!-- TEXT DECODE -->
+
+            <div class="stego-panel">
+
+                <div class="panel-title">
+
+                    <span>🔓</span>
+
+                    <div>
+
+                        <h3>
+                            Decode Text
+                        </h3>
+
+                        <p>
+                            Reveal the hidden message
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <label for="encodedTextInput">
+                    ENCODED TEXT
+                </label>
+
+
+                <textarea
+                    id="encodedTextInput"
+                    placeholder="Paste encoded text here..."
+                ></textarea>
+
+
+                <button
+                    type="button"
+                    id="decodeTextBtn"
+                    class="cyber-btn"
+                >
+                    🔓 DECODE TEXT
+                </button>
+
+
+                <div class="text-result">
+
+                    <span>
+                        HIDDEN MESSAGE
+                    </span>
+
+                    <textarea
+                        id="decodedTextResult"
+                        readonly
+                        placeholder="The hidden message will appear here..."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= AUDIO STEGANOGRAPHY ================= -->
+
+    <section
+        id="audio"
+        class="section text-stego"
+    >
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                AUDIO STEGANOGRAPHY
+            </span>
+
+            <h2>
+                Hide Data Inside
+                <span>Audio</span>
+            </h2>
+
+            <p>
+                Hide a secret message inside an audio file.
+            </p>
+
+        </div>
+
+
+        <div class="text-stego-grid">
+
+
+            <!-- AUDIO ENCODE -->
+
+            <div class="stego-panel">
+
+                <div class="panel-title">
+
+                    <span>🔊</span>
+
+                    <div>
+
+                        <h3>
+                            Encode Audio
+                        </h3>
+
+                        <p>
+                            Hide your secret message
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <label for="encodeAudio">
+                    SELECT AUDIO
+                </label>
+
+
+                <input
+                    type="file"
+                    id="encodeAudio"
+                    accept="audio/*"
+                >
+
+
+                <label for="audioSecretMessage">
+                    SECRET MESSAGE
+                </label>
+
+
+                <textarea
+                    id="audioSecretMessage"
+                    placeholder="Enter the message you want to hide..."
+                ></textarea>
+
+
+                <label for="audioPassword">
+                    PASSWORD
+                </label>
+
+
+                <div class="password-box">
+
+                    <input
+                        type="password"
+                        id="audioPassword"
+                        placeholder="Enter password"
+                    >
+
+                    <button
+                        type="button"
+                        id="toggleAudioPassword"
+                    >
+                        SHOW
+                    </button>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="encodeAudioBtn"
+                    class="cyber-btn"
+                >
+                    🔐 ENCODE AUDIO
+                </button>
+
+
+                <div
+                    id="audioEncodeResult"
+                    class="text-result"
+                >
+
+                    <span>
+                        AUDIO STATUS
+                    </span>
+
+                    <p>
+                        Select an audio file to begin.
+                    </p>
+
+                </div>
+
+
+                <a
+                    id="downloadAudioBtn"
+                    style="display:none;"
+                    download="stegoart-encoded-audio.wav"
+                    class="cyber-btn"
+                >
+                    ⬇️ DOWNLOAD ENCODED AUDIO
+                </a>
+
+            </div>
+
+
+            <!-- AUDIO DECODE -->
+
+            <div class="stego-panel">
+
+                <div class="panel-title">
+
+                    <span>🔓</span>
+
+                    <div>
+
+                        <h3>
+                            Decode Audio
+                        </h3>
+
+                        <p>
+                            Extract the hidden message
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <label for="decodeAudio">
+                    SELECT ENCODED AUDIO
+                </label>
+
+
+                <input
+                    type="file"
+                    id="decodeAudio"
+                    accept=".wav,audio/wav"
+                >
+
+
+                <label for="decodeAudioPassword">
+                    PASSWORD
+                </label>
+
+
+                <div class="password-box">
+
+                    <input
+                        type="password"
+                        id="decodeAudioPassword"
+                        placeholder="Enter password"
+                    >
+
+                    <button
+                        type="button"
+                        id="toggleDecodeAudioPassword"
+                    >
+                        SHOW
+                    </button>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="decodeAudioBtn"
+                    class="cyber-btn"
+                >
+                    🔓 DECODE AUDIO
+                </button>
+
+
+                <div class="text-result">
+
+                    <span>
+                        HIDDEN MESSAGE
+                    </span>
+
+                    <textarea
+                        id="decodedAudioMessage"
+                        readonly
+                        placeholder="Decoded message will appear here..."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+<!-- ================= VIDEO STEGANOGRAPHY ================= -->
+
+<section
+    id="video"
+    class="section text-stego"
+>
+
+    <div class="section-header">
+
+        <span class="section-tag">
+            VIDEO STEGANOGRAPHY
+        </span>
+
+        <h2>
+            Hide Data Inside
+            <span>Video</span>
+        </h2>
+
+        <p>
+            Hide a secret message inside an MP4 video file.
+        </p>
+
+    </div>
+
+
+    <div class="text-stego-grid">
+
+
+        <!-- VIDEO ENCODE -->
+
+        <div class="stego-panel">
+
+            <div class="panel-title">
+
+                <span>🎥</span>
+
+                <div>
+
+                    <h3>
+                        Encode Video
+                    </h3>
+
+                    <p>
+                        Hide your secret message
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <label for="encodeVideo">
+                SELECT MP4 VIDEO
+            </label>
+
+
+            <input
+                type="file"
+                id="encodeVideo"
+                accept="video/mp4,.mp4"
+            >
+
+
+            <video
+                id="encodeVideoPreview"
+                controls
+                style="display:none; width:100%; margin-top:15px;"
+            ></video>
+
+
+            <label for="videoSecretMessage">
+                SECRET MESSAGE
+            </label>
+
+
+            <textarea
+                id="videoSecretMessage"
+                placeholder="Enter the message you want to hide..."
+            ></textarea>
+
+
+            <label for="videoPassword">
+                PASSWORD
+            </label>
+
+
+            <div class="password-box">
+
+                <input
+                    type="password"
+                    id="videoPassword"
+                    placeholder="Enter password"
+                >
+
+                <button
+                    type="button"
+                    id="toggleVideoPassword"
+                >
+                    SHOW
+                </button>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="encodeVideoBtn"
+                class="cyber-btn"
+            >
+                🔐 ENCODE VIDEO
+            </button>
+
+
+            <div
+                id="videoEncodeResult"
+                class="text-result"
+            >
+
+                <span>
+                    VIDEO STATUS
+                </span>
+
+                <p>
+                    Select an MP4 video to begin.
+                </p>
+
+            </div>
+
+
+            <a
+                id="downloadVideoBtn"
+                style="display:none;"
+                download="stegoart-encoded-video.mp4"
+                class="cyber-btn"
+            >
+                ⬇️ DOWNLOAD ENCODED VIDEO
+            </a>
+
+        </div>
+
+
+
+        <!-- VIDEO DECODE -->
+
+        <div class="stego-panel">
+
+            <div class="panel-title">
+
+                <span>🔓</span>
+
+                <div>
+
+                    <h3>
+                        Decode Video
+                    </h3>
+
+                    <p>
+                        Extract the hidden message
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <label for="decodeVideo">
+                SELECT ENCODED MP4
+            </label>
+
+
+            <input
+                type="file"
+                id="decodeVideo"
+                accept="video/mp4,.mp4"
+            >
+
+
+            <video
+                id="decodeVideoPreview"
+                controls
+                style="display:none; width:100%; margin-top:15px;"
+            ></video>
+
+
+            <label for="decodeVideoPassword">
+                PASSWORD
+            </label>
+
+
+            <div class="password-box">
+
+                <input
+                    type="password"
+                    id="decodeVideoPassword"
+                    placeholder="Enter password"
+                >
+
+                <button
+                    type="button"
+                    id="toggleDecodeVideoPassword"
+                >
+                    SHOW
+                </button>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="decodeVideoBtn"
+                class="cyber-btn"
+            >
+                🔓 DECODE VIDEO
+            </button>
+
+
+            <div class="text-result">
+
+                <span>
+                    HIDDEN MESSAGE
+                </span>
+
+                <textarea
+                    id="decodedVideoMessage"
+                    readonly
+                    placeholder="Decoded message will appear here..."
+                ></textarea>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            &lt;/&gt; STEGOART
+        </div>
+
+        <p>
+            The Art of Hiding Data
+        </p>
+
+        <div class="footer-line"></div>
+
+        <small>
+            © 2026 StegoArt • Educational Project
+        </small>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <!-- IMPORTANT:
+         script.js is loaded ONCE,
+         at the very bottom of the page. -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
